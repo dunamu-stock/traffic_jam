@@ -24,9 +24,9 @@ local clear_before = arg_timestamp - arg_period
 local mytable = hgetall(KEYS[1])
 if mytable ~= false then
   -- print key -> value for mytable
-  print('mytable:')
+--   print('mytable:')
   for key, val in pairs(mytable) do
-    print('    ' .. key .. ' -> ' .. val)
+--     print('    ' .. key .. ' -> ' .. val)
     if tonumber(key) < clear_before then
       redis.call('HDEL', KEYS[1], key)
     else

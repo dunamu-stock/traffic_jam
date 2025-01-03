@@ -1,15 +1,7 @@
 require 'redis'
 require 'timecop'
-require 'simplecov'
-require 'minitest/autorun'
 require 'spy/integration'
-
-SimpleCov.start :test_frameworks
-
-if ENV['CI']
-  require 'coveralls'
-  Coveralls.wear!
-end
+require 'minitest/autorun'
 
 require 'traffic_jam'
 
